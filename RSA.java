@@ -38,7 +38,7 @@ public class RSA
         PrivateKey privateKey = keyPair.getPrivate();
         
         //Output user input in plain text 
-        System.out.println(String.format("Your un-encrpyted message is: [ %s ]", originalMsg));
+        System.out.println(String.format("Your un-encrpyted message is: [ %s ] - PUBLIC KEY IS: [%s]", originalMsg, publicKey));
         
         //Perform encryption process using public key
         byte[] cipherByteArray = encryptFunc(originalMsg, publicKey);
@@ -53,7 +53,7 @@ public class RSA
         System.out.println(String.format("Your encrypted message is: [ %s ]", encryptedText));
         
         //Output the cycled message back to user from plaintext to RSA encryption back to plaintext
-        System.out.println(String.format("Your decrypted message is: [ %s ]", decryptedText));
+        System.out.println(String.format("Your decrypted message is: [ %s ] - PRIVATE KEY IS: [%s]", decryptedText, privateKey));
         
     }
     
